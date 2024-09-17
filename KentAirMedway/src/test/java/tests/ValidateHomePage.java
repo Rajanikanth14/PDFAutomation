@@ -2,6 +2,9 @@ package tests;
 
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -38,6 +41,12 @@ public class ValidateHomePage extends BaseDriver
 		Assert.assertEquals(g.getTitleOfPage(), "Kent and Medway Air Quality");
 		
 		h.clickOnAcceptCookies();
+		
+		System.out.println(h.validateHeaders());
+		
+		ArrayList<String> expHeaders = new ArrayList<>(Arrays.asList("Home", "Data", "Reports", "About Air Quality", "LAQM", "Sustainable travel", "FAQs", "Subscribe", "LSO Training", "AQ sensors", "Education"));
+		
+		Assert.assertEquals(h.validateHeaders(), expHeaders);
 	}
 	
 	@AfterTest

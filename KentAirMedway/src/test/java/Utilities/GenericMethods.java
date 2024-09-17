@@ -15,7 +15,7 @@ public class GenericMethods
 	{
 		String title = driver.getTitle();
 		
-		return null;
+		return title;
 		
 	}
 
