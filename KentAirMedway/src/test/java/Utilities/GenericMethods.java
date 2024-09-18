@@ -1,6 +1,7 @@
 package Utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class GenericMethods 
 {
@@ -17,6 +18,11 @@ public class GenericMethods
 		
 		return title;
 		
+	}
+	
+	public void clikOnElement(WebElement w) {
+		
+		w.click();
 	}
 
 }
